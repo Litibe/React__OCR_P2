@@ -101,7 +101,6 @@ nav ul li:hover {
 }
 .btn i {
   padding-right: 10px;
-  color: #0065fc;
 }
 
 .btn:hover {
@@ -163,6 +162,7 @@ section {
   flex-direction: row;
   justify-content: space-between;
 }
+
 .card-heberg {
   background: white;
   width: 246px;
@@ -172,11 +172,45 @@ section {
   padding: 5px;
 }
 .img-card-heberg img {
-  position: relative;
   width: 246px;
   height: 124px;
   object-fit: cover;
   border-radius: 20px 20px 0px 0px;
+}
+.card-famous {
+  background: white;
+  width: 343px;
+  height: 144px;
+  border-radius: 20px;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+}
+.title-famous {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.content-famous {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+.content-article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+.img-card-famous img {
+  width: 137px;
+  height: 144px;
+  object-fit: cover;
+  border-radius: 20px 0px 0px 20px;
 }
 .star {
   display: flex;
@@ -192,21 +226,6 @@ section {
   width: 12px;
   height: 12px;
   color: #f2f2f2;
-}
-.p-0 {
-  padding: 0;
-}
-.py-1 {
-  padding: 5px 0px;
-}
-.m-0 {
-  margin: 0;
-}
-.mx-1 {
-  margin: 0px 2px;
-}
-.me-1 {
-  margin-right: 2px;
 }
 
 /* ############   3 - Footer  ################ */
@@ -242,5 +261,31 @@ h4 {
 }
 .currency {
   font-weight: 600;
+}
+.text-400 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+.p-0 {
+  padding: 0;
+}
+.py-1 {
+  padding: 5px 0px;
+}
+.py-2 {
+  padding: 10px 0px;
+}
+.m-0 {
+  margin: 0;
+}
+.mx-1 {
+  margin: 0px 2px;
+}
+.me-1 {
+  margin-right: 2px;
+}
+.text-blue {
+  color: #0065fc;
 }
 /* ############   5 - Responsive    ########## */
