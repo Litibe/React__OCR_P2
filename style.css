@@ -87,7 +87,7 @@ nav ul li:hover {
 
 .filters {
   margin: 31px 0px;
-  width: 75%;
+  width: 914px;
   font-weight: 700;
   display: flex;
   flex-direction: row;
@@ -108,16 +108,6 @@ nav ul li:hover {
   background: #deebff;
 }
 
-.btn-light {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: solid 1px #d9d9d9;
-  color: #0065fc;
-  width: 24px;
-  height: 24px;
-  font-size: 11px;
-}
 .rounded {
   border-radius: 50px;
 }
@@ -130,14 +120,110 @@ nav ul li:hover {
 .infobar span {
   padding-left: 10px;
 }
+.btn-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px #d9d9d9;
+  color: #0065fc;
+  width: 24px;
+  height: 24px;
+  font-size: 11px;
+}
 
 /* ############   2 - Main    ################ */
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+}
+.offers {
+  width: 880px;
+  height: 628px;
+  background-color: #f2f2f2;
+  border-radius: 20px;
+  padding: 40px;
+  margin: 30px 0px;
+}
+.famous {
+  width: 420px;
+  height: 628px;
+  background-color: #f2f2f2;
+  border-radius: 20px;
+  padding: 40px;
+  margin: 30px 0px;
+}
+.include-card {
+  margin: 20px 0px;
+}
+.card-heberg {
+  background: white;
+  width: 246px;
+  height: 199px;
+  border-radius: 20px;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  padding: 5px;
+}
+.img-card-heberg img {
+  position: relative;
+  width: 246px;
+  height: 124px;
+  object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
+}
+.star {
+  display: flex;
+  flex-direction: row;
+  height: 12px;
+}
+.star-check i {
+  width: 12px;
+  height: 12px;
+  color: #0065fc;
+}
+.star-uncheck i {
+  width: 12px;
+  height: 12px;
+  color: #f2f2f2;
+}
+.p-0 {
+  padding: 0;
+}
+.py-1 {
+  padding: 5px 0px;
+}
+.m-0 {
+  margin: 0;
+}
+.mx-1 {
+  margin: 0px 2px;
+}
+.me-1 {
+  margin-right: 2px;
+}
+
 /* ############   3 - Footer  ################ */
 /* ############   4 - Color / Font  ########## */
-h1 {
+h1,
+h2 {
   font-size: 22px;
   font-weight: 700;
   line-height: 26px;
+  padding: 0;
+  margin: 0;
+}
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  padding: 0;
+  margin: 0;
+}
+h4 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
   padding: 0;
   margin: 0;
 }
@@ -147,5 +233,8 @@ h1 {
   line-height: 19px;
   margin-top: 8px;
   margin-bottom: 8px;
+}
+.currency {
+  font-weight: 600;
 }
 /* ############   5 - Responsive    ########## */
