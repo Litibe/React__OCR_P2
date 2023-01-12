@@ -8,9 +8,16 @@
 
 /* ############################ */
 body {
-  margin: 0px 50px;
+  margin: 0px;
   padding: 0px;
   font-family: "Raleway", sans-serif;
+}
+.container-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 50px;
+  max-width: 1340px;
 }
 /* ############   1 - Header  ################ */
 header {
@@ -131,36 +138,27 @@ nav ul li:hover {
 }
 
 /* ############   2 - Main    ################ */
-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-content: center;
+.section-offers {
+  display: grid;
+  grid-template-columns: 66% 33%;
+  gap: 40px;
+  margin: 30px 0;
+  background-color: aquamarine;
+  height: 626px;
 }
 .offers {
-  width: 880px;
-  height: 628px;
   background-color: #f2f2f2;
   border-radius: 20px;
   padding: 40px;
-  margin: 30px 0px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.famous {
-  width: 420px;
-  height: 628px;
-  background-color: #f2f2f2;
-  border-radius: 20px;
-  padding: 40px;
-  margin: 30px 0px;
-}
+
 .include-card {
-  margin: 20px 0px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 30.9% 30.9% 30.9%;
+  gap: 31px;
 }
 
 .card-heberg {
@@ -169,23 +167,19 @@ section {
   height: 199px;
   border-radius: 20px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-  padding: 5px;
 }
 .img-card-heberg img {
-  width: 246px;
-  height: 124px;
+  width: 236px;
+  height: 114px;
   object-fit: cover;
   border-radius: 20px 20px 0px 0px;
+  border: solid 5px white;
 }
-.card-famous {
-  background: white;
-  width: 343px;
-  height: 144px;
+
+.famous {
+  background-color: #f2f2f2;
   border-radius: 20px;
-  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-  padding: 5px;
-  display: flex;
-  flex-direction: row;
+  padding: 38px;
 }
 .title-famous {
   display: flex;
@@ -193,24 +187,40 @@ section {
   justify-content: space-between;
   align-items: center;
 }
+.card-famous {
+  background: white;
+  width: 343px;
+  height: 144px;
+  border-radius: 20px;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  display: flex;
+  flex-direction: row;
+}
+
+.content {
+  padding-left: 5px;
+  margin: 0;
+}
+.content-article {
+  background-color: aqua;
+  height: 90%;
+  margin-top: 26px;
+  display: grid;
+  grid-template-rows: 33% 33% 33%;
+  gap: 16px;
+}
 .content-famous {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 10px;
-}
-.content-article {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  height: 100%;
+  padding: 16px 22px 16px 12px;
 }
 .img-card-famous img {
-  width: 137px;
-  height: 144px;
+  width: 128px;
+  height: 135px;
   object-fit: cover;
   border-radius: 20px 0px 0px 20px;
+  border: solid 5px white;
 }
 .star {
   display: flex;
@@ -264,7 +274,6 @@ section {
 footer {
   margin-top: 50px;
   background-color: #f2f2f2;
-  width: 1340px;
   height: 225px;
   display: flex;
   flex-direction: row;
