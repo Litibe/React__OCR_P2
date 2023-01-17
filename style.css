@@ -7,25 +7,31 @@
 /* 5 - Responsive */
 
 /* ############################ */
+@media screen and (min-width: 1440px) {
+  html {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #fafafa;
+  }
+}
 body {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   font-family: "Raleway", sans-serif;
-  max-width: 1400px;
+  display: grid;
+  grid-template-columns: 50px 1340px 50px;
+  grid-template-rows: 1fr;
+  background-color: white;
 }
 .container-page {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0 50px;
-  width: 1340px;
+  grid-column-start: 2;
+  grid-column-end: 2;
 }
 /* ############   1 - Header  ################ */
 header {
   display: flex;
   flex-direction: column;
-  padding-left: 5px;
-  padding-right: 5px;
 }
 
 .header-nav {
@@ -40,7 +46,8 @@ header {
   object-fit: contain;
   padding: 0;
   margin: 0;
-  padding-left: 5px;
+  margin-left: 5px;
+  padding-top: 40px;
 }
 nav ul {
   margin: 0;
@@ -51,7 +58,8 @@ nav ul {
 }
 
 nav ul li {
-  padding: 27px;
+  margin-top: -5px;
+  padding: 45px 33px 0 33px;
 }
 
 nav ul li:hover {
@@ -87,7 +95,10 @@ nav ul li:hover {
   border-bottom: solid 1px #f2f2f2;
   width: 260px;
 }
-.main-location-input input {
+.main-location-input input[type="search"] {
+  height: 48px;
+}
+.main-location-input input[type="text"] {
   height: 40px;
 }
 .main-location-input input:focus {
@@ -103,10 +114,19 @@ nav ul li:hover {
   font-weight: 700;
   cursor: pointer;
 }
-
+button[type="submit"] {
+  outline: none;
+  border: solid 1px #0065fc;
+  font-family: "Raleway", sans-serif;
+}
+button[type="submit"]:hover {
+  cursor: hand;
+  pointer-events: auto;
+}
 .filters {
   margin: 31px 0px;
   width: 914px;
+  font-size: 18px;
   font-weight: 700;
   display: flex;
   flex-direction: row;
@@ -114,16 +134,20 @@ nav ul li:hover {
   align-items: center;
 }
 
-.btn {
+.btn-filter {
   padding: 14px 20px;
   border: solid 2px #d9d9d9;
+  background-color: transparent;
+  font-size: 17px;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
 }
 
-.btn:hover {
+.btn-filter:hover {
   background: #deebff;
   cursor: pointer;
 }
-.btn i {
+.btn-filter i {
   padding-right: 15px;
 }
 
@@ -137,7 +161,7 @@ nav ul li:hover {
   align-items: center;
 }
 .infobar span {
-  padding-left: 10px;
+  margin-left: 10px;
 }
 .btn-info {
   display: flex;
@@ -148,6 +172,9 @@ nav ul li:hover {
   width: 24px;
   height: 24px;
   font-size: 11px;
+}
+.info-result {
+  padding-left: 10px;
 }
 
 /* ############   2 - Main    ################ */
@@ -161,6 +188,7 @@ nav ul li:hover {
 .offers {
   background-color: #f2f2f2;
   border-radius: 20px;
+  margin-left: -8px;
   padding: 40px;
   display: flex;
   flex-direction: column;
@@ -169,8 +197,9 @@ nav ul li:hover {
 
 .include-card {
   display: grid;
-  grid-template-columns: 30.9% 30.9% 30.9%;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 31px;
+  margin-top: -32px;
 }
 
 .card-heberg {
@@ -179,6 +208,10 @@ nav ul li:hover {
   height: 199px;
   border-radius: 20px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+.content {
+  padding: 0 16px;
+  margin: 0;
 }
 .img-card-heberg img {
   width: 236px;
@@ -208,10 +241,6 @@ nav ul li:hover {
   flex-direction: row;
 }
 
-.content {
-  padding-left: 5px;
-  margin: 0;
-}
 .content-article {
   display: grid;
   grid-template-columns: 1fr;
@@ -236,6 +265,7 @@ nav ul li:hover {
   display: flex;
   flex-direction: row;
   height: 12px;
+  font-size: 12px;
 }
 .star-check i {
   width: 12px;
@@ -249,9 +279,13 @@ nav ul li:hover {
 }
 /*Act*/
 .activités {
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+#activities {
+  margin-bottom: 5px;
 }
 .content-act {
   display: flex;
@@ -263,7 +297,6 @@ nav ul li:hover {
   width: 302px;
   height: 445px;
   border-radius: 0px 0px 20px 20px;
-  padding-left: 15px;
 }
 .card-act img {
   width: 302px;
@@ -312,6 +345,9 @@ h2 {
   line-height: 26px;
   padding: 0;
   margin: 0;
+}
+h1 {
+  padding-bottom: 5px;
 }
 h3 {
   font-size: 18px;
@@ -366,10 +402,10 @@ a {
   margin: 0;
 }
 .mx-1 {
-  margin: 0px 2px;
+  margin: 0px 1px;
 }
 .me-1 {
-  margin-right: 2px;
+  margin-right: 1px;
 }
 .text-blue {
   color: #0065fc;
@@ -380,14 +416,35 @@ a {
 .mobile-only {
   display: none;
 }
+.d-none {
+  display: none;
+}
 /* ############   5 - Responsive    ########## */
 @media screen and (max-width: 992px) {
+  html {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #fafafa;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway", sans-serif;
+    display: grid;
+    grid-template-columns: 50px 880px 50px;
+    grid-template-rows: 1fr;
+  }
   .container-page {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 50px;
-    max-width: 880px;
+    margin: 0;
+    padding: 0;
+    width: 880px;
+  }
+  .include-card {
+    margin-top: -15px;
   }
   .mobile-none {
     display: inline;
@@ -395,14 +452,31 @@ a {
   .mobile-only {
     display: none;
   }
+  .logo-brand {
+    margin: 0;
+  }
+  .header-container {
+    margin-top: 50px;
+    margin-left: -5px;
+  }
+  .main-location {
+    height: 49px;
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0px;
+    width: 100%;
+  }
   .filters {
-    margin: 31px 0px;
+    margin: 33px 0px;
     width: 846px;
     font-weight: 700;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+  .infobar {
+    margin-bottom: 8px;
   }
   .section-offers {
     display: flex;
@@ -413,6 +487,7 @@ a {
 
   .offers {
     height: 546px;
+    margin-left: 0px;
   }
   .famous {
     background-color: #f2f2f2;
@@ -433,6 +508,9 @@ a {
     align-items: center;
     margin-top: 20px;
     padding: 10px 0;
+  }
+  .title-famous i {
+    margin-right: 25px;
   }
   .card-famous {
     background: white;
@@ -459,12 +537,16 @@ a {
 
   /*Act*/
   .activités {
-    height: 300px;
+    height: auto;
+  }
+  #activities {
+    margin-left: 10px;
   }
   .content-act {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin: 40px 0px 30px -10px;
   }
   .card-act {
     width: 182px;
@@ -489,8 +571,16 @@ a {
   }
 }
 @media screen and (max-width: 768px) {
-  .body {
-    max-width: 100%;
+  html {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #fafafa;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .container-page {
     display: flex;
@@ -498,10 +588,13 @@ a {
     justify-content: center;
     margin: 0;
     padding: 0;
-    width: 100%;
+    width: 375px;
   }
+  .logo-brand {
+    padding-top: 16px;
+  }
+
   .header-nav {
-    margin-top: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -520,6 +613,7 @@ a {
     text-align: center;
     width: 50%;
     border-bottom: solid 3px #f2f2f2;
+    padding-bottom: 22px;
   }
   nav ul li:hover {
     border: none;
@@ -527,6 +621,9 @@ a {
   }
   .header-container {
     padding: 0px 20px;
+  }
+  .main-location-icon {
+    padding: 14px 15px;
   }
   .main-location {
     height: 49px;
@@ -561,16 +658,25 @@ a {
     grid-column-start: 1;
     grid-column-end: 3;
   }
-  .btn {
-    padding: 10px;
-    vertical-align: middle;
-    height: 25px;
+  .btn-filter {
+    padding: 0px;
+    border: solid 2px #d9d9d9;
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: "Raleway", sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 50px;
   }
-  .btn i {
-    padding-right: 5px;
+  .btn-filter i {
+    padding: 0 10px;
+    margin: 0;
   }
-  .btn span {
-    font-size: 13px;
+  .btn-filter span {
+    font-size: 11px;
   }
 
   .section-offers {
@@ -591,7 +697,7 @@ a {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0 30px;
+    padding: 10px 20px;
   }
   .card-famous {
     background: white;
@@ -637,7 +743,7 @@ a {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 10px;
-    margin: 20px 0 100px 0;
+    margin: 20px 0;
     height: auto;
   }
   .card-heberg {
@@ -657,21 +763,25 @@ a {
   }
   /*Act*/
   .activités {
-    padding: 0 30px;
+    margin: 55px 0 20px 0;
+    padding: 0;
     height: auto;
+  }
+  #activities {
+    margin-left: 20px;
+    margin-bottom: 20px;
   }
   .content-act {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 10px;
-    height: auto;
+    gap: 30px;
   }
   .card-act {
     width: 334px;
     height: 190px;
     border-radius: 0px 0px 20px 20px;
-    margin: 10px auto;
+    margin-left: 5px;
   }
   .card-act img {
     width: 334px;
@@ -682,7 +792,7 @@ a {
   }
   footer {
     margin-top: 50px;
-    padding: 35px 30px 60px 30px;
+    padding: 15px 30px 60px 30px;
     background-color: #f2f2f2;
     height: auto;
     display: flex;

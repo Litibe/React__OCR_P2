@@ -11,6 +11,24 @@
     />
     <title>Booki - Trouvez votre hébergement pour des vacances de rêve</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/images/favicon/site.webmanifest" />
     <script
       src="https://kit.fontawesome.com/7008d6fa0f.js"
       crossorigin="anonymous"
@@ -21,13 +39,14 @@
     <div class="container-page">
       <header>
         <nav class="header-nav">
-          <img
-            class="logo-brand"
-            src="./images/logo/Booki@3x.png"
-            alt="Logo de
+          <a href="."
+            ><img
+              class="logo-brand"
+              src="./images/logo/Booki@3x.png"
+              alt="Logo de
           Booki"
-            title="Logo de Booki"
-          />
+              title="Logo de Booki"
+          /></a>
           <ul>
             <li><a href="#hebergement">Hébergements</a></li>
             <li><a href="#activities">Activités</a></li>
@@ -44,10 +63,13 @@
             </div>
             <div class="main-location-input">
               <input
-                placeholder="Votre ville souhaitée"
+                placeholder="Votre ville recherchée"
                 value="Marseille, France"
                 name="location-input"
                 id="location-input"
+                type="search"
+                aria-label="Votre ville recherchée"
+                title="Votre ville recherchée"
               />
             </div>
             <button class="main-location-search" type="submit">
@@ -59,26 +81,49 @@
           </form>
           <div class="filters">
             <div class="label-filter">Filtres</div>
-            <div class="btn rounded filter-one">
+            <button
+              class="btn-filter rounded filter-one"
+              id="filter-eco"
+              aria-hidden="true"
+              title="Filtrage Économique"
+            >
               <i class="fa-solid fa-money-bill-wave text-blue"></i
               ><span>Économique</span>
-            </div>
-            <div class="btn rounded filter-two">
+            </button>
+            <button
+              class="btn-filter rounded filter-two"
+              id="filter-family"
+              aria-hidden="true"
+              title="Filtrage Familial"
+            >
               <i class="fa-solid fa-person text-blue"></i><span>Familial</span>
-            </div>
-            <div class="btn rounded filter-three">
-              <i class="fa-solid fa-heart text-blue"></i><span>Romantique</span>
-            </div>
-            <div class="btn rounded filter-four">
+            </button>
+            <button
+              class="btn-filter rounded filter-three"
+              id="filter-romantic"
+            >
+              <i
+                class="fa-solid fa-heart text-blue"
+                aria-hidden="true"
+                title="Filtrage Romantique"
+              ></i
+              ><span>Romantique</span>
+            </button>
+            <button
+              class="btn-filter rounded filter-four"
+              aria-hidden="true"
+              title="Filtrage Animaux"
+              id="filter-animals"
+            >
               <i class="fa-solid fa-dog text-blue"></i
               ><span>Animaux autorisés</span>
-            </div>
+            </button>
           </div>
           <div class="infobar">
-            <i class="fa-solid fa-info btn-info rounded"></i
-            ><span
-              >Plus de 500 logements sont disponibles dans cette ville</span
-            >
+            <div class="btn-info rounded"><i class="fa-solid fa-info"></i></div>
+            <div class="info-result">
+              Plus de 500 logements sont disponibles dans cette ville
+            </div>
           </div>
         </div>
       </header>
@@ -103,7 +148,11 @@
                     <p class="text-400 m-0 py-1">
                       Nuit à partir de 25<span class="currency">€</span>
                     </p>
-                    <div class="star">
+                    <div
+                      class="star"
+                      aria-hidden="true"
+                      title="Hôtel 4 étoiles"
+                    >
                       <div class="star-check">
                         <i class="fa-solid fa-star me-1"></i
                         ><i class="fa-solid fa-star mx-1"></i
@@ -130,7 +179,11 @@
                     <p class="text-400 m-0 py-1">
                       Nuit à partir de 52<span class="currency">€</span>
                     </p>
-                    <div class="star">
+                    <div
+                      class="star"
+                      aria-hidden="true"
+                      title="Hôtel 4 étoiles"
+                    >
                       <div class="star-check">
                         <i class="fa-solid fa-star me-1"></i
                         ><i class="fa-solid fa-star mx-1"></i
@@ -157,7 +210,11 @@
                     <p class="text-400 m-0 py-1">
                       Nuit à partir de 76<span class="currency">€</span>
                     </p>
-                    <div class="star">
+                    <div
+                      class="star"
+                      aria-hidden="true"
+                      title="Hôtel 4 étoiles"
+                    >
                       <div class="star-check">
                         <i class="fa-solid fa-star me-1"></i
                         ><i class="fa-solid fa-star mx-1"></i
@@ -184,7 +241,11 @@
                     <p class="text-400 m-0 py-1">
                       Nuit à partir de 46<span class="currency">€</span>
                     </p>
-                    <div class="star">
+                    <div
+                      class="star"
+                      aria-hidden="true"
+                      title="Hôtel 4 étoiles"
+                    >
                       <div class="star-check">
                         <i class="fa-solid fa-star me-1"></i
                         ><i class="fa-solid fa-star mx-1"></i
@@ -211,7 +272,11 @@
                     <p class="text-400 m-0 py-1">
                       Nuit à partir de 23<span class="currency">€</span>
                     </p>
-                    <div class="star">
+                    <div
+                      class="star"
+                      aria-hidden="true"
+                      title="Hôtel 4 étoiles"
+                    >
                       <div class="star-check">
                         <i class="fa-solid fa-star me-1"></i
                         ><i class="fa-solid fa-star mx-1"></i
@@ -238,7 +303,11 @@
                     <p class="text-400 m-0 py-1">
                       Nuit à partir de 96<span class="currency">€</span>
                     </p>
-                    <div class="star">
+                    <div
+                      class="star"
+                      aria-hidden="true"
+                      title="Hôtel 4 étoiles"
+                    >
                       <div class="star-check">
                         <i class="fa-solid fa-star me-1"></i
                         ><i class="fa-solid fa-star mx-1"></i
@@ -276,7 +345,7 @@
                       Nuit à partir de 128<span class="currency">€</span>
                     </p>
                   </div>
-                  <div class="star">
+                  <div class="star" aria-hidden="true" title="Hôtel 4 étoiles">
                     <div class="star-check">
                       <i class="fa-solid fa-star me-1"></i
                       ><i class="fa-solid fa-star mx-1"></i
@@ -305,7 +374,7 @@
                       Nuit à partir de 71<span class="currency">€</span>
                     </p>
                   </div>
-                  <div class="star">
+                  <div class="star" aria-hidden="true" title="Hôtel 4 étoiles">
                     <div class="star-check">
                       <i class="fa-solid fa-star me-1"></i
                       ><i class="fa-solid fa-star mx-1"></i
@@ -333,7 +402,7 @@
                       Nuit à partir de 68<span class="currency">€</span>
                     </p>
                   </div>
-                  <div class="star">
+                  <div class="star" aria-hidden="true" title="Hôtel 4 étoiles">
                     <div class="star-check">
                       <i class="fa-solid fa-star me-1"></i
                       ><i class="fa-solid fa-star mx-1"></i
@@ -399,23 +468,23 @@
         <div>
           <h4>A propos</h4>
           <ul>
-            <li>Fonctionnement du site</li>
-            <li>Conditions générales</li>
-            <li>Données et confidentialité</li>
+            <li><a href=".">Fonctionnement du site</a></li>
+            <li><a href=".">Conditions générales</a></li>
+            <li><a href=".">Données et confidentialité</a></li>
           </ul>
         </div>
         <div>
           <h4>Nos hébergements</h4>
           <ul>
-            <li>Charte Qualité</li>
-            <li>Proposer votre hôtel</li>
+            <li><a href=".">Charte Qualité</a></li>
+            <li><a href=".">Proposer votre hôtel</a></li>
           </ul>
         </div>
         <div>
           <h4>Assistance</h4>
           <ul>
-            <li>Centre d'aide</li>
-            <li>Nous contacter</li>
+            <li><a href=".">Centre d'aide</a></li>
+            <li><a href=".">Nous contacter</a></li>
           </ul>
         </div>
       </footer>
