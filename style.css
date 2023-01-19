@@ -12,7 +12,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: #fafafa;
+    background-color: #d9d9d9;
   }
 }
 body {
@@ -20,13 +20,13 @@ body {
   padding: 0;
   font-family: "Raleway", sans-serif;
   display: grid;
-  grid-template-columns: 50px 1340px 50px;
+  grid-template-columns: minmax(0, 50px) minmax(992px, 1340px) minmax(0, 50px);
   grid-template-rows: 1fr;
   background-color: white;
 }
 .container-page {
   grid-column-start: 2;
-  grid-column-end: 2;
+  grid-column-end: 3;
 }
 /* ############   1 - Header  ################ */
 header {
@@ -288,18 +288,23 @@ button[type="submit"]:hover {
   margin-bottom: 5px;
 }
 .content-act {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns:
+    minmax(120px, 302px) minmax(120px, 302px) minmax(120px, 302px)
+    minmax(120px, 302px);
+  grid-template-rows: 1fr;
+  gap: 43px;
   margin: 10px 0;
 }
 .card-act {
-  width: 302px;
   height: 445px;
   border-radius: 0px 0px 20px 20px;
+  box-sizing: content-box;
+  width: 100%;
 }
 .card-act img {
-  width: 302px;
+  box-sizing: content-box;
+  width: 100%;
   height: 445px;
   object-fit: cover;
   border-radius: 20px;
@@ -321,23 +326,9 @@ footer {
   height: 225px;
 }
 .container-footer {
-  display: flex;
-  flex-direction: row;
-  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   padding: 40px;
-}
-.list-footer1 {
-  margin-left: 30px;
-}
-
-.list-footer2 {
-  position: relative;
-  left: 225px;
-}
-
-.list-footer3 {
-  position: relative;
-  left: 496px;
 }
 
 footer div ul {
@@ -435,19 +426,8 @@ a {
 }
 /* ############   5 - Responsive    ########## */
 @media screen and (max-width: 992px) {
-  html {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: #fafafa;
-  }
   body {
-    margin: 0;
-    padding: 0;
-    font-family: "Raleway", sans-serif;
-    display: grid;
-    grid-template-columns: 50px 880px 50px;
-    grid-template-rows: 1fr;
+    grid-template-columns: minmax(0, 50px) minmax(768px, 880px) minmax(0, 50px);
   }
   .container-page {
     display: flex;
@@ -455,7 +435,6 @@ a {
     justify-content: center;
     margin: 0;
     padding: 0;
-    width: 880px;
   }
   .include-card {
     margin-top: -15px;
@@ -482,12 +461,16 @@ a {
   }
   .filters {
     margin: 33px 0px;
-    width: 846px;
+    width: auto;
     font-weight: 700;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .btn-filter {
+    padding: 14px 18px;
   }
   .infobar {
     margin-bottom: 8px;
@@ -557,22 +540,17 @@ a {
     margin-left: 10px;
   }
   .content-act {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    grid-template-columns:
+      minmax(120px, 302px) minmax(120px, 302px) minmax(120px, 302px)
+      minmax(120px, 302px);
+    gap: 50px;
     margin: 40px 0px 30px 0px;
   }
   .card-act {
-    width: 182px;
     height: 267px;
-    border-radius: 0px 0px 20px 20px;
   }
   .card-act img {
-    width: 182px;
     height: 267px;
-    object-fit: cover;
-    border-radius: 20px;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
   }
   .title-card-act {
     position: relative;
@@ -583,31 +561,16 @@ a {
     padding: 18px;
     border-radius: 0px 0px 20px 20px;
   }
-  .list-footer1 {
-    margin-left: 30px;
-  }
-
-  .list-footer2 {
-    position: relative;
-    left: 95px;
-  }
-
-  .list-footer3 {
-    position: relative;
-    left: 186px;
-  }
 }
 @media screen and (max-width: 768px) {
   html {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: #fafafa;
+    background-color: #d9d9d9;
   }
   body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    grid-template-columns: minmax(0, 50px) minmax(375px, 768px) minmax(0, 50px);
   }
   .container-page {
     display: flex;
@@ -615,7 +578,6 @@ a {
     justify-content: center;
     margin: 0;
     padding: 0;
-    width: 375px;
   }
   .logo-brand {
     padding-top: 16px;
@@ -802,6 +764,7 @@ a {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 30px;
+    margin: auto;
   }
   .card-act {
     width: 334px;
@@ -812,9 +775,6 @@ a {
   .card-act img {
     width: 334px;
     height: 190px;
-    object-fit: cover;
-    border-radius: 20px;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
   }
   footer {
     margin-top: 35px;
@@ -827,21 +787,7 @@ a {
     flex-direction: column;
     padding: 0;
   }
-  .list-footer1 {
-    margin-left: 0;
-    position: relative;
-    left: 0;
-  }
 
-  .list-footer2 {
-    position: relative;
-    left: 0;
-  }
-
-  .list-footer3 {
-    position: relative;
-    left: 0;
-  }
   footer div ul li {
     padding: 5px 0px;
     font-weight: 400;
