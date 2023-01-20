@@ -60,6 +60,7 @@ nav ul {
 nav ul li {
   margin-top: -5px;
   padding: 45px 33px 0 33px;
+  border-top: solid 2px transparent;
 }
 
 nav ul li:hover {
@@ -178,14 +179,18 @@ button[type="submit"]:hover {
 }
 
 /* ############   2 - Main    ################ */
-.section-offers {
-  display: flex;
-  justify-content: space-between;
+
+.sect-offers {
+  display: grid;
+  grid-template-columns: minmax(300px, 440px) minmax(300px, 440px) minmax(
+      300px,
+      440px
+    );
+  gap: 40px;
   margin: 30px 0;
   height: 626px;
-  width: 100%;
 }
-.offers {
+.sect-offers__heberg {
   background-color: #f2f2f2;
   border-radius: 20px;
   margin-left: -8px;
@@ -193,73 +198,108 @@ button[type="submit"]:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
-.include-card {
+.sect-offers__heberg__list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 31px;
   margin-top: -32px;
 }
 
-.card-heberg {
+.sect-offers__heberg__card {
   background: white;
-  width: 246px;
+  box-sizing: content-box;
+  width: 100%;
   height: 199px;
   border-radius: 20px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
-.content {
-  padding: 0 16px;
-  margin: 0;
+.sect-offers__heberg__see-more a {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21px;
 }
-.img-card-heberg img {
-  width: 236px;
+
+.card__heberg__img img {
+  box-sizing: content-box;
+  width: 95%;
+  margin: auto;
   height: 114px;
   object-fit: cover;
   border-radius: 20px 20px 0px 0px;
   border: solid 5px white;
 }
-.famous {
+.card__heberg__content {
+  padding: 0 16px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 65px;
+}
+.card__heberg__title {
+  margin: 0;
+  padding: 0;
+}
+.card__heberg__price {
+  font-weight: 400;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+.sect-offers__famous {
   background-color: #f2f2f2;
   border-radius: 20px;
   padding: 38px;
 }
-.title-famous {
+.sect-offers__famous__title {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-.card-famous {
+.card__famous {
   background: white;
-  width: 343px;
+  width: 100%;
   height: 144px;
+  box-sizing: content-box;
   border-radius: 20px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
   display: flex;
   flex-direction: row;
 }
-
-.content-article {
+.card__famous__title {
+  margin: 0;
+  padding: 0;
+}
+.sect-offers__famous__list {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   height: 100%;
   padding-top: 20px;
 }
-.content-famous {
+.card__famous__content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 16px 22px 16px 12px;
 }
-.img-card-famous img {
-  width: 128px;
+.card__famous__img img {
+  width: 130px;
   height: 135px;
   object-fit: cover;
   border-radius: 20px 0px 0px 20px;
   border: solid 5px white;
+}
+.card__famous__price {
+  font-weight: 400;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
 }
 .star {
   display: flex;
@@ -278,7 +318,7 @@ button[type="submit"]:hover {
   color: #f2f2f2;
 }
 /*Act*/
-.activités {
+.sect-activ {
   margin-top: 60px;
   display: flex;
   flex-direction: column;
@@ -287,7 +327,7 @@ button[type="submit"]:hover {
 #activities {
   margin-bottom: 5px;
 }
-.content-act {
+.sect-activ__list {
   display: grid;
   grid-template-columns:
     minmax(120px, 302px) minmax(120px, 302px) minmax(120px, 302px)
@@ -296,13 +336,13 @@ button[type="submit"]:hover {
   gap: 43px;
   margin: 10px 0;
 }
-.card-act {
+.card__activ {
   height: 445px;
   border-radius: 0px 0px 20px 20px;
   box-sizing: content-box;
   width: 100%;
 }
-.card-act img {
+.card__activ img {
   box-sizing: content-box;
   width: 100%;
   height: 445px;
@@ -310,7 +350,7 @@ button[type="submit"]:hover {
   border-radius: 20px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
-.title-card-act {
+.card__activ__title {
   position: relative;
   bottom: 60px;
   background-color: white;
@@ -355,19 +395,13 @@ h1 {
   padding-bottom: 5px;
 }
 h3 {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 26px;
-  padding: 0;
-  margin: 0;
-}
-h4 {
   font-size: 16px;
   font-weight: 700;
   line-height: 19px;
   padding: 0;
   margin: 0;
 }
+
 .slogan {
   font-size: 16px;
   font-weight: 400;
@@ -385,26 +419,9 @@ input {
 .currency {
   font-weight: 600;
 }
-.text-400 {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-}
 a {
   text-decoration: none;
   color: inherit;
-}
-.p-0 {
-  padding: 0;
-}
-.py-1 {
-  padding: 5px 0px;
-}
-.py-2 {
-  padding: 10px 0px;
-}
-.m-0 {
-  margin: 0;
 }
 .mx-1 {
   margin: 0px 1px;
@@ -436,7 +453,7 @@ a {
     margin: 0;
     padding: 0;
   }
-  .include-card {
+  .sect-offers__heberg__list {
     margin-top: -15px;
   }
   .mobile-none {
@@ -475,30 +492,30 @@ a {
   .infobar {
     margin-bottom: 8px;
   }
-  .section-offers {
+  .sect-offers {
     display: flex;
     flex-direction: column;
     margin: 30px 0;
     height: auto;
   }
 
-  .offers {
+  .sect-offers__heberg {
     height: 546px;
     margin-left: 0px;
   }
-  .famous {
+  .sect-offers__famous {
     background-color: #f2f2f2;
     border-radius: 20px;
     padding: 0 30px;
     height: 278px;
     margin: 50px 0;
   }
-  .content-article {
+  .sect-offers__famous__list {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr;
   }
-  .title-famous {
+  .sect-offers__famous__title {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -506,10 +523,10 @@ a {
     margin-top: 20px;
     padding: 10px 0;
   }
-  .title-famous i {
+  .sect-offers__famous__title i {
     margin-right: 25px;
   }
-  .card-famous {
+  .card__famous {
     background: white;
     width: 252px;
     height: 144px;
@@ -518,14 +535,14 @@ a {
     display: flex;
     flex-direction: row;
   }
-  .img-card-famous img {
+  .card__famous__img img {
     width: 96px;
     height: 134px;
     object-fit: cover;
     border-radius: 20px 0px 0px 20px;
     border: solid 5px white;
   }
-  .content-famous {
+  .card__famous__content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -533,26 +550,26 @@ a {
   }
 
   /*Act*/
-  .activités {
+  .sect-activ {
     height: auto;
   }
   #activities {
     margin-left: 10px;
   }
-  .content-act {
+  .sect-activ__list {
     grid-template-columns:
       minmax(120px, 302px) minmax(120px, 302px) minmax(120px, 302px)
       minmax(120px, 302px);
     gap: 50px;
     margin: 40px 0px 30px 0px;
   }
-  .card-act {
+  .card__activ {
     height: 267px;
   }
-  .card-act img {
+  .card__activ img {
     height: 267px;
   }
-  .title-card-act {
+  .card__activ__title {
     position: relative;
     bottom: 56px;
     height: 26px;
@@ -603,9 +620,11 @@ a {
     width: 50%;
     border-bottom: solid 3px #f2f2f2;
     padding-bottom: 22px;
+    border-bottom: solid 3px transparent;
+    border-top: none;
   }
   nav ul li:hover {
-    border: none;
+    border-top: none;
     border-bottom: solid 3px #0065fc;
   }
   .header-container {
@@ -662,30 +681,30 @@ a {
     font-size: 11px;
   }
 
-  .section-offers {
+  .sect-offers {
     display: flex;
     flex-direction: column-reverse;
     margin: 30px 0;
     height: auto;
   }
-  .famous {
+  .sect-offers__famous {
     background-color: #f2f2f2;
     border-radius: 0px;
     padding: 0;
     height: auto;
     margin: 0;
   }
-  .title-famous {
+  .sect-offers__famous__title {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
   }
-  .title-famous i {
+  .sect-offers__famous__title i {
     margin-right: 0px;
   }
-  .card-famous {
+  .card__famous {
     background: white;
     width: 334px;
     height: 144px;
@@ -693,8 +712,9 @@ a {
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
     display: flex;
     flex-direction: row;
+    margin: auto;
   }
-  .img-card-famous img {
+  .card__famous__img img {
     width: 128px;
     height: 135px;
     object-fit: cover;
@@ -702,21 +722,18 @@ a {
     border: solid 5px white;
   }
 
-  .content-article {
+  .sect-offers__famous__list {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 10px;
     margin-bottom: 40px;
   }
-  .card-famous {
-    margin: auto;
-  }
-  .content-famous {
+  .card__famous__content {
     padding: 16px 22px 16px 12px;
   }
 
-  .offers {
+  .sect-offers__heberg {
     background-color: transparent;
     padding: 30px;
     display: flex;
@@ -724,7 +741,7 @@ a {
     justify-content: space-between;
     height: auto;
   }
-  .include-card {
+  .sect-offers__heberg__list {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -733,7 +750,7 @@ a {
     height: auto;
     margin-left: -10px;
   }
-  .card-heberg {
+  .sect-offers__heberg__card {
     background: white;
     width: 336px;
     height: 199px;
@@ -741,7 +758,7 @@ a {
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
     margin: auto;
   }
-  .img-card-heberg img {
+  .card__heberg__img {
     width: 326px;
     height: 114px;
     object-fit: cover;
@@ -749,7 +766,7 @@ a {
     border: solid 5px white;
   }
   /*Act*/
-  .activités {
+  .sect-activ {
     margin: 55px 0 20px 0;
     padding: 0;
     height: auto;
@@ -759,20 +776,20 @@ a {
     margin-left: 20px;
     margin-bottom: 20px;
   }
-  .content-act {
+  .sect-activ__list {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 30px;
     margin: auto;
   }
-  .card-act {
+  .card__activ {
     width: 334px;
     height: 190px;
     border-radius: 0px 0px 20px 20px;
     margin-left: 5px;
   }
-  .card-act img {
+  .card__activ img {
     width: 334px;
     height: 190px;
   }
