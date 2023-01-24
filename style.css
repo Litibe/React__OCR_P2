@@ -122,10 +122,7 @@ button[type="submit"] {
   border: solid 1px #0065fc;
   font-family: "Raleway", sans-serif;
 }
-button[type="submit"]:hover {
-  cursor: hand;
-  pointer-events: auto;
-}
+
 .filters {
   margin: 31px 0;
   width: 914px;
@@ -305,7 +302,7 @@ button[type="submit"]:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 15px;
+  padding: 10px 15px 15px 15px;
   width: 100%;
 }
 .card__famous__content h3 {
@@ -364,7 +361,9 @@ button[type="submit"]:hover {
 .sect-activ__list {
   display: grid;
   grid-template-columns:
-    minmax(120px, 302px) minmax(120px, 302px) minmax(120px, 302px)
+    minmax(120px, 302px)
+    minmax(120px, 302px)
+    minmax(120px, 302px)
     minmax(120px, 302px);
   grid-template-rows: 1fr;
   gap: 43px;
@@ -504,32 +503,19 @@ a {
   .mobile-only {
     display: none;
   }
-  .logo-brand {
-    margin: 0;
-  }
   .header-container {
-    margin-top: 50px;
-    margin-left: -5px;
+    padding-left: 0;
   }
   .main-location {
-    height: 49px;
-    display: flex;
-    flex-direction: row;
     margin: 20px 0;
     width: 100%;
   }
   .main-location-icon {
-    width: 30px;
     padding: 14px 10px;
   }
   .filters {
     margin: 33px 0;
     width: auto;
-    font-weight: 700;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
   }
 
   .btn-filter {
@@ -544,14 +530,11 @@ a {
     margin: 30px 0;
     height: auto;
   }
-
   .sect-offers__heberg {
     height: 546px;
     margin-left: 0;
   }
   .sect-offers__famous {
-    background-color: #f2f2f2;
-    border-radius: 20px;
     padding: 0 39px;
     height: 278px;
     margin: 10px 0 50px 0;
@@ -566,22 +549,14 @@ a {
     margin-bottom: 26px;
   }
   .sect-offers__famous__card {
-    background: white;
     max-width: 252px;
   }
-
   .card__famous__img img {
     max-width: 96px;
-    width: 100%;
-    height: 134px;
-    box-sizing: content-box;
-    object-fit: cover;
-    border-radius: 20px 0 0 20px;
-    border: solid 5px white;
   }
   .card__famous__content {
-    margin-left: -20px;
-    padding: 15px 10px;
+    margin-left: 0px;
+    padding: 15px 10px 15px 0;
   }
   .card__famous__title {
     font-size: 14px;
@@ -620,31 +595,15 @@ a {
   }
 }
 @media screen and (max-width: 767px) {
-  html {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: #d9d9d9;
-  }
   body {
-    grid-template-columns: minmax(0, 50px) minmax(375px, 768px) minmax(0, 50px);
-  }
-  .container-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
+    grid-template-columns: 0 minmax(375px, 767px) 0;
   }
   .logo-brand {
     padding-top: 16px;
   }
-
   .header-nav {
-    display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
   }
   nav ul {
     margin: 0;
@@ -673,15 +632,11 @@ a {
   }
   .main-location {
     margin: 35px 0 25px 0;
-    width: 100%;
   }
   .main-location-icon {
-    padding: 14px 10px;
     width: 50px;
   }
   .main-location-input {
-    border-top: solid 1px #f2f2f2;
-    border-bottom: solid 1px #f2f2f2;
     padding-left: 10px;
     width: 70%;
   }
@@ -725,33 +680,23 @@ a {
     font-size: 11px;
   }
   .infobar {
-    display: flex;
-    flex-direction: row;
     align-items: flex-start;
     margin-top: 42px;
     margin-bottom: 35px;
   }
   .btn-info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: solid 1px #d9d9d9;
-    color: #0065fc;
     height: 20px;
     font-size: 12px;
   }
   .sect-offers {
-    display: flex;
     flex-direction: column-reverse;
     margin: 0;
     padding: 0;
-    height: auto;
     width: 100%;
   }
   .sect-offers__famous {
     margin: 0;
     padding: 0 20px 0 20px;
-    background-color: #f2f2f2;
     border-radius: 0;
     height: 580px;
     box-sizing: content-box;
@@ -802,9 +747,6 @@ a {
 
   .sect-offers__heberg {
     padding: 0 20px 0 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     height: auto;
     border-radius: 0;
     background: white;
@@ -822,9 +764,7 @@ a {
     margin: 20px 0;
     height: auto;
   }
-  .sect-offers__heberg__card {
-    width: 100%;
-  }
+
   .card__heberg__img {
     height: 114px;
     margin-bottom: 10px;
@@ -838,7 +778,6 @@ a {
   .sect-activ {
     margin: 0 0 20px 0;
     padding: 0 20px 0 10px;
-    height: auto;
   }
   .sect-activ h2 {
     margin-top: 10px;
@@ -846,7 +785,6 @@ a {
     width: 50%;
   }
   .sect-activ__list {
-    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 27px;
