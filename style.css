@@ -7,7 +7,7 @@
 /* 5 - Responsive */
 
 /* ############################ */
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1441px) {
   html {
     display: flex;
     flex-direction: row;
@@ -152,6 +152,7 @@ button[type="submit"]:hover {
 }
 .btn-filter i {
   padding-right: 15px;
+  color: #0065fc;
 }
 
 .rounded {
@@ -185,10 +186,10 @@ button[type="submit"]:hover {
 
 .sect-offers {
   display: grid;
-  grid-template-columns: minmax(300px, 440px) minmax(300px, 440px) minmax(
-      300px,
-      440px
-    );
+  grid-template-columns:
+    minmax(300px, 440px)
+    minmax(300px, 440px)
+    minmax(300px, 440px);
   gap: 40px;
   margin: 30px 0;
   height: 626px;
@@ -342,11 +343,13 @@ button[type="submit"]:hover {
   width: 12px;
   height: 12px;
   color: #0065fc;
+  margin: 0 1px;
 }
 .star-uncheck i {
   width: 12px;
   height: 12px;
   color: #f2f2f2;
+  margin-right: 1px;
 }
 /*Act*/
 .sect-activ {
@@ -391,7 +394,7 @@ button[type="submit"]:hover {
   bottom: 57px;
   height: 56px;
   background-color: white;
-  border-radius: 00 20px 20px;
+  border-radius: 0 0 20px 20px;
   display: flex;
   align-items: center;
   padding-left: 20px;
@@ -468,12 +471,6 @@ a {
   text-decoration: none;
   color: inherit;
 }
-.mx-1 {
-  margin: 0 1px;
-}
-.me-1 {
-  margin-right: 1px;
-}
 .text-blue {
   color: #0065fc;
 }
@@ -487,7 +484,7 @@ a {
   display: none;
 }
 /* ############   5 - Responsive    ########## */
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
   body {
     grid-template-columns: minmax(0, 50px) minmax(768px, 880px) minmax(0, 50px);
   }
@@ -622,7 +619,7 @@ a {
     margin-top: 35px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   html {
     display: flex;
     flex-direction: row;
