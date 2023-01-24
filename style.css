@@ -68,7 +68,7 @@ nav ul li:hover {
   color: #0065fc;
 }
 .header-container {
-  margin-top: 30px;
+  margin-top: 50px;
   padding-left: 5px;
 }
 .main-location {
@@ -80,16 +80,12 @@ nav ul li:hover {
   margin-top: 20px;
 }
 .main-location-icon {
-  width: 25px;
+  width: 30px;
   border: solid 1px #f2f2f2;
   background: #f2f2f2;
-  padding: 14px 15px;
+  padding: 14px 20px;
   text-align: center;
-  border-radius: 15px 0px 0px 15px;
-}
-.fa-solid fa-location-dot {
-  width: 14px;
-  height: 18px;
+  border-radius: 15px 0 0 15px;
 }
 .main-location-input {
   border-top: solid 1px #f2f2f2;
@@ -110,10 +106,16 @@ nav ul li:hover {
   color: white;
   padding: 13px 15px;
   text-align: center;
-  border-radius: 0px 15px 15px 0px;
+  border-radius: 0 15px 15px 0;
   font-size: 18px;
   font-weight: 700;
   cursor: pointer;
+  transition: all ease-in-out 300ms;
+}
+.main-location-search:hover {
+  background: #deebff;
+  color: #0065fc;
+  transition: all ease-in-out 300ms;
 }
 button[type="submit"] {
   outline: none;
@@ -125,7 +127,7 @@ button[type="submit"]:hover {
   pointer-events: auto;
 }
 .filters {
-  margin: 31px 0px;
+  margin: 31px 0;
   width: 914px;
   font-size: 18px;
   font-weight: 700;
@@ -174,6 +176,7 @@ button[type="submit"]:hover {
   height: 24px;
   font-size: 11px;
 }
+
 .info-result {
   padding-left: 10px;
 }
@@ -206,7 +209,7 @@ button[type="submit"]:hover {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 31px;
-  margin-top: -32px;
+  margin-top: -15px;
 }
 
 .sect-offers__heberg__card {
@@ -216,6 +219,14 @@ button[type="submit"]:hover {
   height: 199px;
   border-radius: 20px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  transition: all ease-in-out 300ms;
+}
+.sect-offers__heberg__card:hover {
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.4));
+  transition: all ease-in-out 300ms;
+}
+.sect-offers__heberg__see-more {
+  margin-bottom: 5px;
 }
 .sect-offers__heberg__see-more a {
   font-size: 18px;
@@ -229,7 +240,7 @@ button[type="submit"]:hover {
   margin: auto;
   height: 114px;
   object-fit: cover;
-  border-radius: 20px 20px 0px 0px;
+  border-radius: 20px 20px 0 0;
   border: solid 5px white;
 }
 .card__heberg__content {
@@ -283,21 +294,21 @@ button[type="submit"]:hover {
   border-radius: 20px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
   height: 144px;
-  display: flex;
-  flex-direction: row;
+  transition: all ease-in-out 300ms;
+}
+.sect-offers__famous__card:hover {
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.4));
+  transition: all ease-in-out 300ms;
 }
 .card__famous__content {
-  margin-left: auto;
-  margin-right: auto;
-  padding: 8px;
-  height: 120px;
-  width: 70%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 15px;
+  width: 100%;
 }
 .card__famous__content h3 {
-  line-height: 18px;
+  font-weight: bold;
 }
 
 .card__famous__img {
@@ -312,7 +323,7 @@ button[type="submit"]:hover {
   height: 133px;
   box-sizing: content-box;
   object-fit: cover;
-  border-radius: 20px 0px 0px 20px;
+  border-radius: 20px 0 0 20px;
   border: solid 5px white;
 }
 .card__famous__price {
@@ -358,7 +369,7 @@ button[type="submit"]:hover {
 }
 .card__activ {
   height: 445px;
-  border-radius: 0px 0px 20px 20px;
+  border-radius: 00 20px 20px;
   box-sizing: content-box;
   width: 100%;
 }
@@ -369,13 +380,18 @@ button[type="submit"]:hover {
   object-fit: cover;
   border-radius: 20px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  transition: all ease-in-out 300ms;
+}
+.card__activ img:hover {
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.4));
+  transition: all ease-in-out 300ms;
 }
 .card__activ__title {
   position: relative;
   bottom: 57px;
   height: 56px;
   background-color: white;
-  border-radius: 0px 0px 20px 20px;
+  border-radius: 00 20px 20px;
   display: flex;
   align-items: center;
   padding-left: 20px;
@@ -390,18 +406,26 @@ footer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   padding: 40px;
+  margin-left: 30px;
+  gap: 40px;
 }
 
 footer div ul {
   margin: 0;
-  padding: 15px 0px;
+  padding: 15px 0;
   list-style-type: none;
 }
 footer div ul li {
-  padding: 7px 0px;
+  padding: 7px 0;
   font-weight: 400;
   font-size: 16px;
   line-height: 18.78px;
+  transition: all ease-in-out 300ms;
+  width: fit-content;
+}
+footer div ul li:hover {
+  color: #0065fc;
+  transition: all ease-in-out 300ms;
 }
 /* ############   4 - Color / Font  ########## */
 h1,
@@ -445,7 +469,7 @@ a {
   color: inherit;
 }
 .mx-1 {
-  margin: 0px 1px;
+  margin: 0 1px;
 }
 .me-1 {
   margin-right: 1px;
@@ -494,11 +518,15 @@ a {
     height: 49px;
     display: flex;
     flex-direction: row;
-    margin: 20px 0px;
+    margin: 20px 0;
     width: 100%;
   }
+  .main-location-icon {
+    width: 30px;
+    padding: 14px 10px;
+  }
   .filters {
-    margin: 33px 0px;
+    margin: 33px 0;
     width: auto;
     font-weight: 700;
     display: flex;
@@ -522,18 +550,19 @@ a {
 
   .sect-offers__heberg {
     height: 546px;
-    margin-left: 0px;
+    margin-left: 0;
   }
   .sect-offers__famous {
     background-color: #f2f2f2;
     border-radius: 20px;
     padding: 0 39px;
     height: 278px;
-    margin: 50px 0;
+    margin: 10px 0 50px 0;
   }
   .sect-offers__famous__list {
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 22px;
   }
   .sect-offers__famous__title {
     margin-top: 30px;
@@ -550,17 +579,20 @@ a {
     height: 134px;
     box-sizing: content-box;
     object-fit: cover;
-    border-radius: 20px 0px 0px 20px;
+    border-radius: 20px 0 0 20px;
     border: solid 5px white;
   }
   .card__famous__content {
-    margin-left: 0px;
-    width: 100%;
+    margin-left: -20px;
+    padding: 15px 10px;
   }
-  .card__famous__content h3 {
+  .card__famous__title {
     font-size: 14px;
-    line-height: 16px;
+    line-height: 17px;
     font-weight: 900;
+  }
+  .h3_coeur {
+    font-size: 16px;
   }
   .card__famous__content p {
     font-size: 13px;
@@ -570,6 +602,7 @@ a {
     height: auto;
   }
   #activities {
+    margin-top: -10px;
     margin-left: 10px;
   }
   .sect-activ__list {
@@ -577,13 +610,16 @@ a {
       minmax(120px, 302px) minmax(120px, 302px) minmax(120px, 302px)
       minmax(120px, 302px);
     gap: 50px;
-    margin: 40px 0px 30px 0px;
+    margin: 38px 0 30px 0;
   }
   .card__activ {
     height: 267px;
   }
   .card__activ img {
     height: 267px;
+  }
+  footer {
+    margin-top: 35px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -636,16 +672,21 @@ a {
   }
   .header-container {
     margin-top: 30px;
-    padding: 0px 20px;
+    padding: 0 20px;
   }
   .main-location {
-    margin: 35px 0px 25px 0;
+    margin: 35px 0 25px 0;
     width: 100%;
+  }
+  .main-location-icon {
+    padding: 14px 10px;
+    width: 50px;
   }
   .main-location-input {
     border-top: solid 1px #f2f2f2;
     border-bottom: solid 1px #f2f2f2;
-    width: 75%;
+    padding-left: 10px;
+    width: 70%;
   }
   .mobile-none {
     display: none;
@@ -669,7 +710,7 @@ a {
     grid-column-end: 3;
   }
   .btn-filter {
-    padding: 0px;
+    padding: 0;
     border: solid 2px #d9d9d9;
     background-color: transparent;
     font-size: 18px;
@@ -690,7 +731,8 @@ a {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    margin-bottom: 30px;
+    margin-top: 42px;
+    margin-bottom: 35px;
   }
   .btn-info {
     display: flex;
@@ -713,12 +755,12 @@ a {
     margin: 0;
     padding: 0 20px 0 20px;
     background-color: #f2f2f2;
-    border-radius: 0px;
+    border-radius: 0;
     height: 580px;
     box-sizing: content-box;
   }
   .sect-offers__famous__title {
-    padding: 10px 0 0 0;
+    padding: 0;
   }
 
   .sect-offers__famous__list {
@@ -734,20 +776,23 @@ a {
   }
 
   .card__famous__content {
-    margin: auto;
     width: 175px;
-    padding-left: 25px;
-    padding-right: 25px;
+    margin-left: 0;
+    padding-left: 10px;
+    padding-right: 20px;
   }
   .card__famous__content h3 {
     font-size: 16px;
     margin-bottom: 5px;
   }
+  .card__famous__content p {
+    font-size: 14px;
+  }
   .card__famous__img {
-    min-width: 137px;
+    min-width: 117px;
   }
   .card__famous__img img {
-    max-width: 100%;
+    max-width: 90%;
   }
 
   .sect-offers__famous__list {
@@ -759,16 +804,18 @@ a {
   }
 
   .sect-offers__heberg {
-    padding: 0 20px 0 15px;
+    padding: 0 20px 0 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: auto;
     border-radius: 0;
     background: white;
+    margin-bottom: 80px;
   }
   .sect-offers__heberg h2 {
     margin-left: 0;
+    margin-top: -10px;
   }
   .sect-offers__heberg__list {
     display: grid;
@@ -779,44 +826,41 @@ a {
     height: auto;
   }
   .sect-offers__heberg__card {
-    min-width: 336px;
+    width: 100%;
   }
   .card__heberg__img {
     height: 114px;
-    border-radius: 20px 20px 0px 0px;
     margin-bottom: 10px;
+    width: 100%;
   }
   .card__heberg__img img {
     height: 114px;
-    border-radius: 20px 20px 0px 0px;
-    border: solid 5px white;
-    box-sizing: content-box;
-    object-fit: cover;
-    min-width: 99%;
+    width: 97%;
   }
   /*Act*/
   .sect-activ {
-    margin: 55px 0 20px 0;
+    margin: 0 0 20px 0;
     padding: 0 20px 0 10px;
     height: auto;
   }
   .sect-activ h2 {
-    margin-top: 30px;
+    margin-top: 10px;
+    margin-bottom: 2px;
     width: 50%;
   }
   .sect-activ__list {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 30px;
+    gap: 27px;
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
   .card__activ {
     min-width: 334px;
     max-width: 100%;
     height: 190px;
-    border-radius: 0px 0px 20px 20px;
+    border-radius: 00 20px 20px;
     margin: auto;
   }
   .card__activ img {
@@ -834,14 +878,18 @@ a {
     display: flex;
     flex-direction: column;
     padding: 0;
+    margin-left: 0;
   }
   footer section {
-    margin-bottom: 20px;
+    margin-bottom: -20px;
   }
   footer div ul li {
-    padding: 5px 0px;
+    padding: 5px 0;
     font-weight: 400;
     font-size: 16px;
     line-height: 18.78px;
+  }
+  .section-footer__help {
+    margin-top: 10px;
   }
 }
