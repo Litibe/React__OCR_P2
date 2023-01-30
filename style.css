@@ -7,7 +7,7 @@
 /* 5 - Responsive */
 
 /* ############################ */
-@media screen and (min-width: 1441px) {
+@media screen and (min-width: 1401px) {
   html {
     display: flex;
     flex-direction: row;
@@ -20,7 +20,7 @@ body {
   padding: 0;
   font-family: "Raleway", sans-serif;
   display: grid;
-  grid-template-columns: minmax(0, 50px) minmax(992px, 1340px) minmax(0, 50px);
+  grid-template-columns: minmax(0, 30px) minmax(992px, 1340px) minmax(0, 30px);
   grid-template-rows: 1fr;
   background-color: white;
 }

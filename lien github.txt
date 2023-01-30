@@ -1,0 +1,5 @@
+Repository : https://github.com/Litibe/React__OCR_P2
+Git Pages : https://litibe.github.io/React__OCR_P2/
+
+Branche master : 1 commit initialisation et 1 commit (git merge dev)
+Branche Dev : 22 commits
